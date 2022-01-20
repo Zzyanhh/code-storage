@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+struct identity
+{
+	char name[10];
+	int age;
+	int weight;
+	int tall;
+	char hobby[10];
+};
+int main()
+{
+	struct identity zzy = { "Zzy",20,45,170,"发呆" };
+	zzy.age = 21;
+	strcpy(zzy.name, "五条悟");
+	printf("名字：%s\n", zzy.name);
+	printf("年龄：%d\n", zzy.age);
+	printf("体重：%d\n", zzy.weight);
+	printf("身高：%d\n", zzy.tall);
+	printf("爱好：%s\n", zzy.hobby);
+	struct identity* pb = &zzy;
+	printf("%s\n",pb->hobby);
+	
+	return 0;
+}
